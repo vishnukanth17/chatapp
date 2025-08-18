@@ -81,3 +81,31 @@ const Container = styled.div`
     }
   }
 `;
+
+// const Container = styled.div`
+//   height: 100vh;
+//   width: 100vw;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 1rem;
+//   background: linear-gradient(135deg, #a8edea, #fed6e3); /* light blue + pastel pink */
+
+//   .container {
+//     height: 85vh;
+//     width: 85vw;
+//     display: grid;
+//     grid-template-columns: 25% 75%;
+//     background: rgba(255, 255, 255, 0.6);
+//     backdrop-filter: blur(12px);
+//     border-radius: 20px;
+//     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+//     overflow: hidden;
+//     transition: all 0.3s ease-in-out;
+
+//     @media screen and (min-width: 720px) and (max-width: 1080px) {
+//       grid-template-columns: 35% 65%;
+//     }
+//   }
+// `;

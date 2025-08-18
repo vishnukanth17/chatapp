@@ -107,74 +107,172 @@ export default function ChatContainer({ currentChat, socket }) {
   );
 }
 
+// const Container = styled.div`
+//   display: grid;
+//   grid-template-rows: 10% 80% 10%;
+//   gap: 0.1rem;
+//   overflow: hidden;
+//   @media screen and (min-width: 720px) and (max-width: 1080px) {
+//     grid-template-rows: 15% 70% 15%;
+//   }
+//   .chat-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 0 2rem;
+//     .user-details {
+//       display: flex;
+//       align-items: center;
+//       gap: 1rem;
+//       .avatar {
+//         img {
+//           height: 3rem;
+//         }
+//       }
+//       .username {
+//         h3 {
+//           color: white;
+//         }
+//       }
+//     }
+//   }
+//   .chat-messages {
+//     padding: 1rem 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+//     overflow: auto;
+//     &::-webkit-scrollbar {
+//       width: 0.2rem;
+//       &-thumb {
+//         background-color: #ffffff39;
+//         width: 0.1rem;
+//         border-radius: 1rem;
+//       }
+//     }
+//     .message {
+//       display: flex;
+//       align-items: center;
+//       .content {
+//         max-width: 40%;
+//         overflow-wrap: break-word;
+//         padding: 1rem;
+//         font-size: 1.1rem;
+//         border-radius: 1rem;
+//         color: #d1d1d1;
+//         @media screen and (min-width: 720px) and (max-width: 1080px) {
+//           max-width: 70%;
+//         }
+//       }
+//     }
+//     .sended {
+//       justify-content: flex-end;
+//       .content {
+//         background-color: #4f04ff21;
+//       }
+//     }
+//     .recieved {
+//       justify-content: flex-start;
+//       .content {
+//         background-color: #9900ff20;
+//       }
+//     }
+//   }
+// `;
+
 const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 80% 10%;
-  gap: 0.1rem;
+  gap: 0.2rem;
   overflow: hidden;
+  background: linear-gradient(135deg, #e3f2fd, #fff3e0); /* light blue + light orange */
+
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     grid-template-rows: 15% 70% 15%;
   }
+
   .chat-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    background: rgba(255, 183, 77, 0.25); /* pastel orange shade */
+    border-bottom: 2px solid #90caf9; /* light blue border */
+    border-radius: 0 0 1rem 1rem;
+
     .user-details {
       display: flex;
       align-items: center;
       gap: 1rem;
+
       .avatar {
         img {
           height: 3rem;
+          border-radius: 50%;
+          border: 2px solid #64b5f6;
         }
       }
+
       .username {
         h3 {
-          color: white;
+          color: #1565c0; /* deep pastel blue */
+          font-weight: 600;
         }
       }
     }
   }
+
   .chat-messages {
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    overflow: auto;
+    overflow-y: auto;
+
     &::-webkit-scrollbar {
-      width: 0.2rem;
-      &-thumb {
-        background-color: #ffffff39;
-        width: 0.1rem;
-        border-radius: 1rem;
-      }
+      width: 0.3rem;
     }
+    &::-webkit-scrollbar-thumb {
+      background-color: #64b5f6;
+      border-radius: 0.5rem;
+    }
+
     .message {
       display: flex;
       align-items: center;
+
       .content {
-        max-width: 40%;
+        max-width: 50%;
         overflow-wrap: break-word;
-        padding: 1rem;
-        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
         border-radius: 1rem;
-        color: #d1d1d1;
+        transition: all 0.3s ease;
+        color: #263238; /* dark grey text for readability */
+
         @media screen and (min-width: 720px) and (max-width: 1080px) {
           max-width: 70%;
         }
+
+        &:hover {
+          transform: scale(1.02);
+        }
       }
     }
+
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #4f04ff21;
+        background: #bbdefb; /* pastel blue */
+        border: 1px solid #64b5f6;
       }
     }
+
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #9900ff20;
+        background: #ffe0b2; /* pastel orange */
+        border: 1px solid #ffb74d;
       }
     }
   }

@@ -174,3 +174,83 @@ const Container = styled.div`
     }
   }
 `;
+
+// const Container = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 3rem;
+//   background: linear-gradient(135deg, #a8dadc, #f1faee); /* pastel gradient */
+//   height: 100vh;
+//   width: 100vw;
+//   text-align: center;
+
+//   .loader {
+//     max-inline-size: 100%;
+//   }
+
+//   .title-container {
+//     h1 {
+//       color: #1d3557; /* dark navy */
+//       font-size: 2rem;
+//       span {
+//         color: #ff9f68; /* orange accent */
+//       }
+//     }
+//   }
+
+//   .avatars {
+//     display: flex;
+//     gap: 2rem;
+//     flex-wrap: wrap;
+//     justify-content: center;
+
+//     .avatar {
+//       border: 0.3rem solid transparent;
+//       padding: 0.5rem;
+//       border-radius: 50%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       transition: all 0.3s ease-in-out;
+//       background: #f8f9fa;
+//       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+//       img {
+//         height: 6rem;
+//         transition: transform 0.3s ease;
+//       }
+
+//       &:hover {
+//         cursor: pointer;
+//         transform: scale(1.1);
+//         box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+//       }
+//     }
+
+//     .selected {
+//       border: 0.3rem solid #ff9f68; /* pastel orange border when selected */
+//       box-shadow: 0px 0px 15px rgba(255, 159, 104, 0.6);
+//     }
+//   }
+
+//   .submit-btn {
+//     background-color: #ff9f68;
+//     color: #fff;
+//     padding: 1rem 2rem;
+//     border: none;
+//     font-weight: bold;
+//     cursor: pointer;
+//     border-radius: 0.6rem;
+//     font-size: 1rem;
+//     text-transform: uppercase;
+//     letter-spacing: 1px;
+//     transition: background-color 0.3s ease, transform 0.2s ease;
+
+//     &:hover {
+//       background-color: #ff7b54; /* darker orange */
+//       transform: scale(1.05);
+//     }
+//   }
+// `;

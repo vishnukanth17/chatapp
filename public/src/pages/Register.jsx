@@ -90,7 +90,7 @@ export default function Register() {
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>ConvoCraft</h1>
           </div>
           <input
             type="text"
@@ -126,7 +126,6 @@ export default function Register() {
     </>
   );
 }
-
 const FormContainer = styled.div`
   height: 100vh;
   width: 100vw;
@@ -135,63 +134,106 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #b3e5fc);
+
   .brand {
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
+
     img {
       height: 5rem;
     }
+
     h1 {
-      color: white;
-      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffb347, #ffcc33, #ffd180);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
     }
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: #00000076;
-    border-radius: 2rem;
-    padding: 3rem 5rem;
-  }
-  input {
-    background-color: transparent;
-    padding: 1rem;
-    border: 0.1rem solid #4e0eff;
-    border-radius: 0.4rem;
-    color: white;
-    width: 100%;
-    font-size: 1rem;
-    &:focus {
-      border: 0.1rem solid #997af0;
-      outline: none;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 1.2rem;
+    padding: 2.5rem 3.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
   }
+
+  input {
+    background: #ffffffcc;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.8rem;
+    color: #333;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+
+    &:focus {
+      border: 1px solid #ffb347;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(255, 179, 71, 0.3);
+      outline: none;
+      transform: scale(1.02);
+    }
+  }
+
   button {
-    background-color: #4e0eff;
-    color: white;
-    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #81d4fa, #4fc3f7, #29b6f6);
+    color: #fff;
+    padding: 0.9rem 2rem;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 0.4rem;
+    border-radius: 0.8rem;
     font-size: 1rem;
-    text-transform: uppercase;
+    transition: all 0.4s ease;
+
     &:hover {
-      background-color: #4e0eff;
+      transform: scale(1.07);
+      background: linear-gradient(90deg, #ffb347, #ffcc33, #ff8a65);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      transform: scale(0.97);
     }
   }
+
   span {
-    color: white;
+    color: #444;
     text-transform: uppercase;
     a {
-      color: #4e0eff;
+      color: #ff8a65;
       text-decoration: none;
       font-weight: bold;
     }
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;
+
+
